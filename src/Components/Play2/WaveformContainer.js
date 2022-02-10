@@ -1,5 +1,4 @@
 import React from "react";
-import Header2 from "../Header/Header2";
 import Waveform from "./Waveform";
 import { Link } from "react-router-dom";
 
@@ -107,13 +106,13 @@ class WaveformContainer extends React.Component {
                         <div className='col-12'>
                             <div className="d-flex flex-row">
                                 <div>
-                                    <span>Created</span><span></span>
+                                    <span className="mx-2">Created</span><span></span>
                                 </div>
                                 <div>
-                                    <span>Start time</span><span></span>
+                                    <span className="mx-2">Start time</span><span></span>
                                 </div>
                                 <div>
-                                    <span>Length</span><span></span>
+                                    <span className="mx-2">Length</span><span></span>
                                 </div>
 
                             </div>
