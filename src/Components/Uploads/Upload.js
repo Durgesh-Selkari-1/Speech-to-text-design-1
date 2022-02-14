@@ -7,28 +7,29 @@ export default function Upload() {
 
     const changeHandler = (event) => {
         setSelectedFile(event.target.files[0]);
+        
 
     };
 
     const handleSubmission = () => {
-        // const formData = new FormData();
+        const formData = new FormData();
 
-        // formData.append('File', selectedFile);
+        formData.append('File', selectedFile);
 
-        // fetch(
-        //     'https://freeimage.host/api/1/upload?key=<YOUR_API_KEY>',
-        //     {
-        //         method: 'POST',
-        //         body: formData,
-        //     }
-        // )
-        //     .then((response) => response.json())
-        //     .then((result) => {
-        //         console.log('Success:', result);
-        //     })
-        //     .catch((error) => {
-        //         console.error('Error:', error);
-        //     });
+        fetch(
+            'https://audio--manager.herokuapp.com/audio/addAudio',
+            {
+                method: 'POST',
+                audioFile: formData,
+            }
+        )
+            .then((response) => response.json())
+            .then((result) => {
+                console.log('Success:', result);
+            })
+            .catch((error) => {
+                console.error('Error:', error);
+            });
     };
 
 
@@ -42,7 +43,7 @@ export default function Upload() {
                             <div className="card">
                                 <div className="card-body mx-auto">
                                     <h5 className="card-title mb-3">Add Audio Files</h5>
-                                    <input type="file" multiple id="img" name="img" accept="audio/*"  onChange={changeHandler} /><br />
+                                    <input type="file" multiple  accept="audio/*"  onChange={changeHandler} /><br />
                                     <input type="submit" value="Submit" onClick={handleSubmission} className="btn btn-secondary my-3 mx-auto" />
                                 </div>
                             </div>

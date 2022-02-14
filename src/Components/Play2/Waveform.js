@@ -22,8 +22,8 @@ export default class Waveform extends React.Component {
       container: this.waveformRef.current,
       waveColor: "violet",
       progressColor: "purple",
-      barWidth: 2,
-      barHeight: 0.5,
+      barWidth: 1,
+      barHeight:1
       
     });
     this.setState({ wavesurfer });

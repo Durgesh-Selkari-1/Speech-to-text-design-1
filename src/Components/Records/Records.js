@@ -9,7 +9,7 @@ export default function Records() {
     const [users, setUsers] = useState([]);
 
     const getUsers = async () => {
-        const response = await fetch('');
+        const response = await fetch('https://audio--manager.herokuapp.com/audio/getAudios');
 
         setUsers(await response.json());
 
@@ -51,13 +51,13 @@ export default function Records() {
 
 
 
-                                            <td className=' text-start'><div>{curElem.full_name}1</div></td>
+                                            <td className=' text-start'><div>{curElem.audioFile}1</div></td>
 
-                                            <td className=' text-start'><div>{curElem.company_name}1</div></td>
+                                            <td className=' text-start'><div>{curElem.audioLength}1</div></td>
 
-                                            <td className=' text-start'><div>{curElem.email}</div></td>
+                                            <td className=' text-start'><div>{curElem.updatedAt}</div></td>
 
-                                            <td className=' text-start'><div>{curElem.subject}</div></td>
+                                            <td className=' text-start'><div>{curElem.createdAt}</div></td>
 
 
 
