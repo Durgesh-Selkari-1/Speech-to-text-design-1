@@ -12,6 +12,7 @@ function App() {
     {/* <Upload/> */}
     {/* <Header/> */}
     {/* <Records/> */}
+    ":apple"
     </div>
   );
 }
