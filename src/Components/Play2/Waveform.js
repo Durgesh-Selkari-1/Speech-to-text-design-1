@@ -1,7 +1,7 @@
 // components/waveform.js
 import React from "react";
-import ReactDOM from "react-dom";
-import WaveSurfer from "wavesurfer";
+// import ReactDOM from "react-dom";
+import WaveSurfer from "wavesurfer.js";
 
 export default class Waveform extends React.Component {
   constructor(props) {

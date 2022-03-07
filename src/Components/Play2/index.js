@@ -1,6 +1,6 @@
 import React from 'react';
-import { render } from 'react-dom';
-import WaveSurfer from 'wavesurfer';
+// import { render } from 'react-dom';
+// import WaveSurfer from 'wavesurfer.js';
 import WaveformContainer from './WaveformContainer';
 
 

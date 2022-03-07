@@ -9,7 +9,7 @@ export default function Records() {
     const [users, setUsers] = useState([]);
 
     const getUsers = async () => {
-        const response = await fetch('https://audio--manager.herokuapp.com/audio/getAudios');
+        const response = await fetch('http://audio--manager.herokuapp.com/audio/getAudios');
 
         setUsers(await response.json());
 
@@ -40,12 +40,13 @@ export default function Records() {
 
                         </tr>
                     </thead>
-                    <tbody style={{}} >
+                    {/* <tbody>
+
                         {
 
                             users.map((curElem) => {
                                 return (
-                                    <>
+                                    
 
                                         <tr >
 
@@ -63,24 +64,26 @@ export default function Records() {
 
 
                                         </tr>
-                                    </>
+                                    
                                 )
 
-                            })}
-                    </tbody>
+                            })
+                        }
+
+                    </tbody> */}
                 </table>
 
 
 
 
             </div>
-            <div className='container d-flex justify-content-center'>
+            <div className='container d-flex justify-content-center mb-5'>
                 <Link to="/upload" >
                     <button className='btn text-light' style={{ backgroundColor: "#005a50" }}>Upload Files</button>
                 </Link>
 
                 <div >
-                    <Link to="/play" >
+                    <Link to="/play" target='_blank' >
                         <button type='button' className='btn text-light rounded-0 mx-3' style={{ backgroundColor: "#005a50" }}>play-page</button>
                     </Link>
                 </div>

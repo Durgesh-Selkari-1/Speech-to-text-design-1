@@ -1,8 +1,7 @@
 import React from "react";
 import Waveform from "./Waveform";
 import { Link } from "react-router-dom";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCoffee } from '@fortawesome/free-solid-svg-icons';
+
 
 class WaveformContainer extends React.Component {
     constructor() {
@@ -52,11 +51,12 @@ class WaveformContainer extends React.Component {
 
     render() {
         const waveforms = [];
-        this.state.urls.map(url => {
+        this.state.urls.map((url) => {
             console.log(url);
-            waveforms.push(
+          return  waveforms.push(
                 <div>
                     <Waveform
+                  
                         src={url.url}
                         isPlaying={this.state.isPlaying}
                         isAtBeginning={this.state.isAtBeginning}
