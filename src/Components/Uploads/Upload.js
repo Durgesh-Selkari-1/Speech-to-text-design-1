@@ -10,14 +10,15 @@ export default function Upload() {
         
 
     };
-
-    const handleSubmission = () => {
+    // 'https://audio--manager.herokuapp.com/audio/addAudio',
+    const handleSubmission = (event) => {
+        event.preventDefault()
         const formData = new FormData();
 
         formData.append('File', selectedFile);
 
         fetch(
-            'https://audio--manager.herokuapp.com/audio/addAudio',
+            'http://localhost:3000/audio/addAudio',
             {
                 method: 'POST',
                 audioFile: formData,
@@ -37,7 +38,7 @@ export default function Upload() {
         <>
         <Header2/>
             <div className="container-fluid mx-auto my-5 ">
-                <form method="post" className='mx-auto'>
+                <form method="post"  className='mx-auto'>
                     <div className="row mx-auto">
                         <div className="col-10 mx-auto">
                             <div className="card">
