@@ -18,17 +18,17 @@ export default function Upload() {
             formData.append("Allfiles", values.Allfiles);
             console.log(values);
 
-            return fetch("https://audio--manager.herokuapp.com/audio/addAudio",
+            return  fetch("https://audio--manager.herokuapp.com/audio/uploadAudio",
                 {
                     method: 'post',
                     headers: new Headers({ Accept: 'application/json' }),
-                    body: formData ,
+                    body:formData ,
                     mode:"no-cors"
                 })
                 .then(response => response.json())
                 .then(formData => console.log(formData))
                 .catch(error => console.log(error))
-
+            
 
             // alert("Form Submitted");
 
